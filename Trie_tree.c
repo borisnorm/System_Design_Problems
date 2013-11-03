@@ -22,7 +22,7 @@ void insert(trie_node_ptr root, char * s){
   for(;level<lengh;level++){
     index=s[level]-'a';
     if(p->children[index]==NULL)
-      p->children[index]=new_node;
+      p->children[index]=new_node();
     p=p->children[index];
   }
   p->count++;// none zero---> leaf node, stranding for a string
