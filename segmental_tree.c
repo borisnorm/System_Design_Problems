@@ -51,7 +51,7 @@ int count(seg_nptr root){
     reurn root->b-root->a;
   else if(root->b-root->a==1)
     return 0;
-  return count(root->left+root->right);
+  return count(root->left)+count(root->right);
 }
 
 
